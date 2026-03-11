@@ -1,0 +1,8 @@
+Etunimi : hehe
+Sukunimi : haha
+Syntymävuosi : 1222
+Voitot : 0
+Häviöt : 0
+Voitto prosentti : 0
+Tasapelit : 0
+Pelien kesto : 0

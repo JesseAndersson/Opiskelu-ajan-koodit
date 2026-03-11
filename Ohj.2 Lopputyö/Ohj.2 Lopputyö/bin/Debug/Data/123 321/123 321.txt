@@ -1,0 +1,8 @@
+Etunimi : 123
+Sukunimi : 321
+Syntymävuosi : 11111
+Voitot : 0
+Häviöt : 0
+Voitto prosentti : 0
+Tasapelit : 0
+Pelien kesto : 0

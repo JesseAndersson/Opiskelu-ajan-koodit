@@ -1,0 +1,8 @@
+Etunimi : aSDASD
+Sukunimi : asddds
+Syntymävuosi : 1233
+Voitot : 0
+Häviöt : 0
+Voitto prosentti : 0
+Tasapelit : 0
+Pelien kesto : 0
