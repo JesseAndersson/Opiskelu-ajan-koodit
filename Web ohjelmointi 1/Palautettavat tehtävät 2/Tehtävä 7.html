@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,select{
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kursseille ilmoittautumislomake</h1>
+
+    <form action="http://animalhospital.freemyip.com/test.php" method="get" target="_blank">
+        <fieldset>
+        <label for="nimi">Nimi</label>
+        <input type="text" id="nimi" name="nimi" value=""><br>
+
+        <label for="vuosikurssi">Vuosikurssi</label>
+        <input type="password" id="vuosikurssi" name="secret" required><br>
+
+        <label for="kurssin_nimi">Valitse kurssin nimi</label>
+        <select name="alasvetovalikko" id="kurssin_nimi">
+            <option value="opt1">Web-ohjelmointi 1</option>
+            <option value="opt2">Matematiikka</option>
+            <option value="opt3">Fysiikka</option>
+        </select><br>
+
+        <label for="kurssin_tyyppi">Valitse kurssin tyyppi</label>
+        <select name="alasvetovalikko2" id="kurssin_tyyppi">
+            <option value="optio1">Lähisuoritus</option>
+            <option value="optio2">Etäsuoritus</option>
+        </select><br>
+
+        <label>Valitse sukupuolesi</label>
+        <input type="radio" id="mies" name="sukupuoli" value="Mies">
+        <label for="mies">Mies</label>
+
+        <input type="radio" id="nainen" name="sukupuoli" value="Nainen">
+        <label for="nainen">Nainen</label>
+
+        <input type="radio" id="muu" name="sukupuoli" value="Muu">
+        <label for="muu">Muu</label><br>
+        </fieldset>
+        <fieldset>
+        <legend>Harrastuksesi</legend>
+
+        <input type="checkbox" id="cb1" name="hobbies_Friba">
+        <label for="cb1">Frisbee golf</label><br>
+
+        <input type="checkbox" id="cb2" name="hobbies_Latka">
+        <label for="cb2">Jääkiekko</label><br>
+
+        <input type="checkbox" id="cb3" name="hobbies_Kalja" checked>
+        <label for="cb3">Kaljan juonti</label><br>
+
+        <input type="checkbox" id="cb4" name="hobbies_Golf">
+        <label for="cb4">Golf</label><br>
+    </fieldset>
+        
+        <br>
+        <input type="submit" value="Lähetä">
+        <input type="reset" value="Tyhjennä">
+    </form>
+</body>
+</html>

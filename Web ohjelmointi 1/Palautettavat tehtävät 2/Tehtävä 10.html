@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        select {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        #laheta{
+            background-image: url(orava-.png);
+            color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kursseille ilmoittautumislomake</h1>
+
+    <form action="http://animalhospital.freemyip.com/test.php" method="get" target="_blank">
+        <fieldset>
+            <table>
+                <tr>
+                    <th><label for="nimi">Nimi</label></th>
+                    <td><input type="text" id="nimi" name="nimi" value=""></td>
+                </tr>
+
+                <tr>
+                    <th><label for="vuosikurssi">Vuosikurssi</label></th>
+                    <td><input type="password" id="vuosikurssi" name="secret" required></td>
+                </tr>
+                <tr>
+                    <th><label for="kurssin_nimi">Valitse kurssin nimi</label></th>
+                    <td><select name="alasvetovalikko[]" size="3" id="kurssin_nimi" multiple>
+                            <option value="opt_web">Web-ohjelmointi 1</option>
+                            <option value="opt_matikka">Matematiikka</option>
+                            <option value="opt_fysiikka">Fysiikka</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th><label for="oppilaitos">Oppilaitos</label></th>
+                    <td><input type="text" id="oppilaitos" name="oppilaitos" value="Savonia AMK" disabled></td>
+                </tr>
+
+                <tr>
+                    <th><label for="kurssin_tyyppi">Valitse kurssin tyyppi</label></th>
+                    <td><select name="alasvetovalikko2" id="kurssin_tyyppi">
+                            <option value="optio_lahi">Lähisuoritus</option>
+                            <option value="optio_eta">Etäsuoritus</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th><label>Valitse sukupuolesi</label></th>
+                    <td><input type="radio" id="mies" name="sukupuoli" value="Mies">
+                        <label for="mies">Mies</label>
+
+                        <input type="radio" id="nainen" name="sukupuoli" value="Nainen">
+                        <label for="nainen">Nainen</label>
+
+                        <input type="radio" id="muu" name="sukupuoli" value="Muu">
+                        <label for="muu">Muu</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Harrastuksesi</th>
+
+                    <td><input type="checkbox" id="cb1" name="hobbies_Friba">
+                        <label for="cb1">Frisbee golf</label><br>
+
+                        <input type="checkbox" id="cb2" name="hobbies_Latka">
+                        <label for="cb2">Jääkiekko</label><br>
+
+                        <input type="checkbox" id="cb3" name="hobbies_Kalja" checked>
+                        <label for="cb3">Kaljan juonti</label><br>
+
+                        <input type="checkbox" id="cb4" name="hobbies_Golf">
+                        <label for="cb4">Golf</label><br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <input id="laheta" type="submit" value="Lähetä">
+        <input type="reset" value="Tyhjennä">
+    </form>
+</body>
+
+</html>
