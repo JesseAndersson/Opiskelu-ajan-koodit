@@ -1,0 +1,10 @@
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\bin\Debug\ohelmistotuontantomokki.exe.config
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\bin\Debug\ohelmistotuontantomokki.exe
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\bin\Debug\ohelmistotuontantomokki.pdb
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.csproj.AssemblyReference.cache
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.Form1.resources
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.Properties.Resources.resources
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.csproj.GenerateResource.cache
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.csproj.CoreCompileInputs.cache
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.exe
+C:\Users\jessu\Source\Repos\JurpoUrpo\ohelmistotuontantomokki\ohelmistotuontantomokki\obj\Debug\ohelmistotuontantomokki.pdb
