@@ -1,0 +1,73 @@
+<!-- Tee html sivu, jossa on 
+
+ensimmäisen tason otsikkona "Morjesta maailma"
+ensimmäisen tason tekstikappaleena "Tämä on ensimmäisen tason tekstiä"
+toisen tason otsikkona "Pienempi tervehdys"
+toisen tason alla tekstikappale "Tämä on samanarvoista tekstiä kuin aikaisempikin"
+jonka alla tekstikappale "Tässä on hieman erilainen muotoilu"
+Tyylit:
+
+ensimmäisen tason otsikon leveys 50%, fontti verdana, taustaväri sininen, tekstin väri punainen
+tekstikappaleen fontti arial, tasaus oikeaan reunaan
+toisen tason otsikko mustalla taustalla, leveys 50% ja tekstin väri punainen
+toisen tason tekstikappaleen alla oleva kappale keltaisella värillä
+sivun taustaväri powderblue
+2. tehtävä
+
+Muokkaa tehtävää 1. niin, että ensimmäinen otsikko ja tekstikappale ovat oman semanttisen elementin sisällä ja toinen otsikko ja sen alla olevat kappaleet omassa semanttisessa elementissään. 
+
+3. Lisää sivun ylälaitaan navigointipalkki, jossa on linkit tehtävän 2 elementteihin. 
+
+4. Muokkaa edellisiä niin, että tyylit ovat omassa CSS-päätteisessä tiedostossa. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuntitehtävä 2 12.09.22</title>
+    <style>
+        h1{
+            width: 50%;
+            font-family: verdana;
+            background-color: blue;
+            color: red;
+        }
+        p{
+            font-family: Arial;
+            text-align: right;
+        }
+        h2{
+            background-color: black;
+            width: 50%;
+            color: red;
+        }
+        #p2{
+            color: yellow;
+        }
+        body{
+            background-color: powderblue;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#section1">Ekaan osioon</a> 
+        <a href="#section2">Tokaan osioon</a>
+    </nav>
+    <section id="section1">
+        <h1>Morjesta maailma</h1>
+        <p>Tämä on ensimmäisen tason tekstiä</p>
+    </section>
+
+    <section id="section2">
+        <h2 >Pienempi tervehdys</h2>
+        <p>Tämä on samanarvoista tekstiä kuin aikaisempikin</p>
+        <p id="p2">Tässä on hieman erilainen muotoilu</p>
+    </section>
+
+</body>
+</html>

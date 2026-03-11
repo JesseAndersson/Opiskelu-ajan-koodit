@@ -1,0 +1,21 @@
+h1{
+    width: 50%;
+    font-family: verdana;
+    background-color: blue;
+    color: red;
+}
+p{
+    font-family: Arial;
+    text-align: right;
+}
+h2{
+    background-color: black;
+    width: 50%;
+    color: red;
+}
+#p2{
+    color: yellow;
+}
+body{
+    background-color: powderblue;
+}

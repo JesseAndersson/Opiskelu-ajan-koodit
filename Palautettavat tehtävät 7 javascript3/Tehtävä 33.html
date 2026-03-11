@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Oppilas {
+
+            constructor(nimi, syntymavuosi, osoite, puhNum) {
+                this.nimi = nimi;
+                this.syntymavuosi = syntymavuosi;
+                this.osoite = osoite;
+                this.puhNum = puhNum;
+                this.arvosanat = [];
+            }
+
+            set nimi(value) {
+                if (value.lenght == 0)
+                    return;
+                this._nimi = value;
+            }
+            set syntymavuosi(value) {
+                this._syntymavuosi = new Date(value).getFullYear();
+            }
+            set osoite(value) {
+                if (value.lenght == 0)
+                    return;
+                this._osoite = value;
+            }
+            set puhNum(value) {
+                if (value.lenght == 0)
+                    return;
+                this._puhNum = value;
+            }
+            get nimi() {
+                return this._nimi;
+            }
+            get syntymavuosi() {
+                return this._syntymavuosi;
+            }
+            get osoite() {
+                return this._osoite;
+            }
+            get puhNum() {
+                return this._puhNum;
+            }
+
+            Tulosta() {
+
+                return console.log("Oppilaan nimi:", this._nimi, "Syntymävuosi:", this._syntymavuosi, "Osoite:", this._osoite, "puhnum:", this._puhNum);
+
+            }
+
+            LaskeIka() {
+                let date = new Date();
+                let year = date.getFullYear();
+                let ika = year - this.syntymavuosi;
+                console.log(ika);
+            }
+
+            LisaaArvosana(kurssi) {
+                if (kurssi instanceof Arvosana) {
+                    this.arvosanat.push(kurssi)
+                }
+            }
+
+            printArvosana() {
+                for (var arvosana of this.arvosanat) {
+                    if (arvosana instanceof Arvosana) {
+                        console.log(arvosana.TulostusArvosana());
+                    }
+                }
+            }
+
+            hyva = function (Arvosanat) {
+                return (Arvosanat._arvosana > 5 ? true : false);
+            }
+            lapi = function (arvo) {
+                return (arvo._arvosana > 0 ? true : false);
+            }
+            get HyvaOppilas() {
+                return this.arvosanat.some(this.hyva);
+            }
+
+            get KurssitLapi() {
+                return this.arvosanat.every(this.lapi);
+            }
+
+            tulostaArvosanatMuutetullaAsteikolla() {
+                var arr = this.arvosanat.map((x) => Math.round(x._arvosana / 2));
+                for (var tulosta of arr)
+                    console.log(" Arvosana : " + tulosta);
+            }
+        }
+
+        class Arvosana {
+
+            constructor(oppiaine, arvosana, suorituspvm) {
+                this.oppiaine = oppiaine;
+                this.arvosana = arvosana;
+                this.suorituspvm = new Date(suorituspvm);
+            }
+
+            set arvosana(value) {
+                if (value < 0 || value > 10)
+                    return;
+                this._arvosana = value;
+            }
+            set oppiaine(value) {
+                if (value.lenght == 0)
+                    return;
+                this._oppiaine = value;
+            }
+            set suorituspvm(value) {
+                this._suorituspvm = new Date(value).toLocaleDateString();
+            }
+            get oppiaine() {
+                return this._oppiaine;
+            }
+            get arvosana() {
+                return this._arvosana;
+            }
+            get suorituspvm() {
+                return this._suorituspvm;
+            }
+
+            TulostusArvosana() {
+                return console.log("Oppiaine: " + this._oppiaine + " Arvosana: " + this._arvosana + " suoritusPVM: " + this._suorituspvm);
+            }
+        }
+
+        const oppilas = new Oppilas("Jonne", "1995", "heeboiluja", "044029309", arvosana = new Arvosana("Matematiikka", 5, "12.05.1999"));
+        const oppilas1 = new Oppilas("Topsukka", "2020", "hihulihei", "0444044022");
+
+        const opiskelijanArvosana = new Arvosana("Webbi", 1, "2020-9-11");
+        const opiskelijanArvosana1 = new Arvosana("Matikka", 5, "2021-12-22");
+        const opiskelijanArvosana2 = new Arvosana("Fysiikka", 8, "2020-9-20");
+        const opiskelijan1Arvosana = new Arvosana("Webbi", 2, "12-9-2000");
+
+        oppilas.LisaaArvosana(opiskelijanArvosana);
+        oppilas.LisaaArvosana(opiskelijanArvosana1);
+        oppilas.LisaaArvosana(opiskelijanArvosana2);
+
+        oppilas1.LisaaArvosana(opiskelijan1Arvosana);
+
+        oppilas.Tulosta();
+        oppilas.printArvosana();
+        oppilas.tulostaArvosanatMuutetullaAsteikolla();
+        oppilas.LaskeIka();
+        oppilas1.Tulosta();
+        oppilas1.printArvosana();
+        oppilas1.tulostaArvosanatMuutetullaAsteikolla();
+        oppilas1.LaskeIka();
+
+        var Lapimeni = () => {
+            if (oppilas.KurssitLapi)
+                console.log("Koulu käyty " + oppilas.nimi);
+            else
+                console.log("Uusiksi senkin paska!" + oppilas.nimi);
+
+            if (oppilas1.KurssitLapi)
+                console.log("Koulu käyty " + oppilas1.nimi);
+            else
+                console.log("Uusiksi senkin paska!" + oppilas1.nimi);
+        }
+
+        Lapimeni();
+
+        var hyvaopiskelija = () => {
+            if (oppilas.HyvaOppilas)
+                console.log("Hyvä saatana!");
+            else
+                console.log("huono oppilas oot!");
+
+            if (oppilas1.HyvaOppilas)
+                console.log("Hyvä saatana!");
+            else
+                console.log("Huono oppilas oot!");
+        }
+
+        hyvaopiskelija();
+
+        
+        
+
+    </script>
+
+
+</body>
+
+</html>
